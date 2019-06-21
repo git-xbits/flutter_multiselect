@@ -204,8 +204,8 @@ class _SelectionModalState extends State<SelectionModal> {
           leading: Transform.scale(
             child: Icon(
                 item['checked']
-                    ? Icons.check_box
-                    : Icons.check_box_outline_blank,
+                    ? Icons.access_alarms
+                    : Icons.ac_unit,
                 color: Color(0xFF3c2e60)),
             scale: 1.5,
           ),
