@@ -121,8 +121,9 @@ class _SelectionModalState extends State<SelectionModal> {
                       icon: Icon(
                         Icons.save,
                         size: 20.0,
+                        color: Color(0xFF3c2e60),
                       ),
-                      color: Colors.blueAccent,
+                      color: Color(0xFF3c2e60),
                       textColor: Colors.white,
                       onPressed: () {
                         var selectedValuesObjectList = _localDataSourceWithState

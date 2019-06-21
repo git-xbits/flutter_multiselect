@@ -114,7 +114,8 @@ class MultiSelect extends FormField<dynamic> {
                                   child: Text(
                                 titleText,
                                 style: TextStyle(
-                                    fontSize: 14.0, color: Colors.black),
+                                    fontSize: 14.0, 
+                                    color: Color(0xFF8D878B)),
                               )),
                               required
                                   ? Text(
@@ -131,7 +132,7 @@ class MultiSelect extends FormField<dynamic> {
                                 children: <Widget>[
                                   Icon(
                                     Icons.arrow_downward,
-                                    color: Color(0xFF3D72B6),
+                                    color: Color(0xFF3c2e60),
                                     size: 30.0,
                                   )
                                 ],
