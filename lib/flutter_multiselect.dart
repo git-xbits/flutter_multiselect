@@ -12,6 +12,7 @@ class MultiSelect extends FormField<dynamic> {
   final bool filterable;
   final List dataSource;
   final String textField;
+  final String subTextField;
   final String valueField;
   final Function change;
   final Function open;
@@ -24,15 +25,16 @@ class MultiSelect extends FormField<dynamic> {
       FormFieldValidator<dynamic> validator,
       dynamic initialValue,
       bool autovalidate = false,
-      this.titleText = 'Title',
-      this.hintText = 'Tap to select one or more...',
+      this.titleText = 'Título',
+      this.hintText = 'Clique para selecionar um ou mais...',
       this.required = false,
-      this.errorText = 'Please select one or more option(s)',
+      this.errorText = 'Por favor, selecione uma ou mais opções',
       this.value,
       this.leading,
       this.filterable = true,
       this.dataSource,
       this.textField,
+      this.subTextField,
       this.valueField,
       this.change,
       this.open,
@@ -73,6 +75,7 @@ class MultiSelect extends FormField<dynamic> {
                               filterable: filterable,
                               valueField: valueField,
                               textField: textField,
+                              subTextField: subTextField,
                               dataSource: dataSource,
                               values: state.value ?? []),
                           fullscreenDialog: true,

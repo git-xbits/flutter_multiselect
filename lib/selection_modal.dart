@@ -8,13 +8,15 @@ class SelectionModal extends StatefulWidget {
   final List values;
   final bool filterable;
   final String textField;
+  final String subTextField;
   final String valueField;
 
   SelectionModal(
       {this.filterable,
       this.dataSource,
       this.values,
-      this.textField
+      this.textField,
+      this.subTextField,
       this.valueField})
       : super();
 }
@@ -51,6 +53,7 @@ class _SelectionModalState extends State<SelectionModal> {
     widget.dataSource.forEach((item) {
       var newItem = {
         'value': item[widget.valueField],
+        'subText': item[widget.subTextField],
         'text': item[widget.textField],
         'checked': widget.values.contains(item[widget.valueField])
       };
@@ -114,7 +117,7 @@ class _SelectionModalState extends State<SelectionModal> {
                   ButtonTheme(
                     height: 50.0,
                     child: RaisedButton.icon(
-                      label: Text('Save'),
+                      label: Text('Salvar'),
                       icon: Icon(
                         Icons.save,
                         size: 20.0,
@@ -154,7 +157,7 @@ class _SelectionModalState extends State<SelectionModal> {
           .singleWhere((itm) => itm['value'] == item, orElse: () => null);
       selectedOptions.add(Chip(
         label: Text(existingItem['text'], overflow: TextOverflow.ellipsis),
-        deleteButtonTooltipMessage: 'Tap to delete this item',
+        deleteButtonTooltipMessage: 'Aperte para apagar esse item',
         deleteIcon: Icon(Icons.cancel),
         deleteIconColor: Colors.grey,
         onDeleted: () {
@@ -172,7 +175,7 @@ class _SelectionModalState extends State<SelectionModal> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 new Text(
-                  'Currently selected items (tap to remove)',
+                  'Ítens selecionados(aperte para remover)',
                   style: TextStyle(
                       color: Colors.black87, fontWeight: FontWeight.bold),
                 ),
@@ -193,6 +196,11 @@ class _SelectionModalState extends State<SelectionModal> {
     _searchresult.forEach((item) {
       options.add(ListTile(
           title: Text(item['text']),
+          subtitle: Wrap(
+            children: <Widget>[
+              Text(item['subText'] ?? ''),
+            ],
+          ),
           leading: Transform.scale(
             child: Icon(
                 item['checked']
@@ -229,7 +237,7 @@ class _SelectionModalState extends State<SelectionModal> {
                     ),
                   ),
                   filled: true,
-                  hintText: "Search...",
+                  hintText: "Procurar...",
                   fillColor: Colors.white,
                   suffix: SizedBox(
                       height: 25.0,
