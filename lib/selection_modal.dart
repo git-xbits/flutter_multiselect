@@ -121,7 +121,6 @@ class _SelectionModalState extends State<SelectionModal> {
                       icon: Icon(
                         Icons.save,
                         size: 20.0,
-                        color: Color(0xFF3c2e60),
                       ),
                       color: Color(0xFF3c2e60),
                       textColor: Colors.white,
@@ -207,7 +206,7 @@ class _SelectionModalState extends State<SelectionModal> {
                 item['checked']
                     ? Icons.check_box
                     : Icons.check_box_outline_blank,
-                color: Colors.blueAccent),
+                color: Color(0xFF3c2e60)),
             scale: 1.5,
           ),
           onTap: () {
