@@ -14,7 +14,7 @@ class SelectionModal extends StatefulWidget {
       {this.filterable,
       this.dataSource,
       this.values,
-      this.textField,
+      this.textField
       this.valueField})
       : super();
 }
@@ -100,7 +100,7 @@ class _SelectionModalState extends State<SelectionModal> {
                   ButtonTheme(
                     height: 50.0,
                     child: RaisedButton.icon(
-                      label: Text('Cancel'),
+                      label: Text('Cancelar'),
                       icon: Icon(
                         Icons.clear,
                         size: 20.0,
