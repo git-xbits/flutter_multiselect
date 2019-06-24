@@ -69,7 +69,7 @@ class _SelectionModalState extends State<SelectionModal> {
       leading: Container(),
       elevation: 0.0,
       title: Text(
-        'Please select one or more',
+        'Por favor, selecione uma ou mais opções.',
       ),
       actions: <Widget>[
         IconButton(
