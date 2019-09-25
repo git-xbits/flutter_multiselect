@@ -175,7 +175,7 @@ class _SelectionModalState extends State<SelectionModal> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 new Text(
-                  'Ítens selecionados(aperte para remover)',
+                  'Itens selecionados(aperte para remover)',
                   style: TextStyle(
                       color: Colors.black87, fontWeight: FontWeight.bold),
                 ),
