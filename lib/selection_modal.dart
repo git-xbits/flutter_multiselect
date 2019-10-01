@@ -65,7 +65,7 @@ class _SelectionModalState extends State<SelectionModal> {
   }
 
   Widget _buildAppBar(BuildContext context) {
-    return AppBar(
+   return AppBar(
       leading: Container(),
       elevation: 0.0,
       title: Text(
@@ -260,7 +260,7 @@ class _SelectionModalState extends State<SelectionModal> {
   Widget build(BuildContext context) {
     return new Scaffold(
       key: globalKey,
-      appBar: _buildAppBar(context),
+      //appBar: _buildAppBar(context),
       body: _buildBody(context),
     );
   }
