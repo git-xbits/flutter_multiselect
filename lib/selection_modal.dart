@@ -102,12 +102,12 @@ class _SelectionModalState extends State<SelectionModal> {
                 children: <Widget>[
                   ButtonTheme(
                     height: 50.0,
-                    child: RaisedButton.icon(
+                    child: RaisedButton/*.icon*/(
                       label: Text('Cancelar'),
-                      icon: Icon(
+/*                      icon: Icon(
                         Icons.clear,
                         size: 20.0,
-                      ),
+                      ),*/
                       color: Colors.grey.shade100,
                       onPressed: () {
                         Navigator.pop(context, null);
@@ -116,12 +116,12 @@ class _SelectionModalState extends State<SelectionModal> {
                   ),
                   ButtonTheme(
                     height: 50.0,
-                    child: RaisedButton.icon(
+                    child: RaisedButton/*.icon*/(
                       label: Text('Salvar'),
-                      icon: Icon(
+                      /*icon: Icon(
                         Icons.save,
                         size: 20.0,
-                      ),
+                      ),*/
                       color: Color(0xFF3c2e60),
                       textColor: Colors.white,
                       onPressed: () {
