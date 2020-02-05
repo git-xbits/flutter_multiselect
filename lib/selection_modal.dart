@@ -103,7 +103,7 @@ class _SelectionModalState extends State<SelectionModal> {
                   ButtonTheme(
                     height: 50.0,
                     child: RaisedButton/*.icon*/(
-                      label: Text('Cancelar'),
+                      /*label:*/child: Text('Cancelar'),
 /*                      icon: Icon(
                         Icons.clear,
                         size: 20.0,
@@ -117,7 +117,7 @@ class _SelectionModalState extends State<SelectionModal> {
                   ButtonTheme(
                     height: 50.0,
                     child: RaisedButton/*.icon*/(
-                      label: Text('Salvar'),
+                      /*label:*/ child: Text('Salvar'),
                       /*icon: Icon(
                         Icons.save,
                         size: 20.0,
